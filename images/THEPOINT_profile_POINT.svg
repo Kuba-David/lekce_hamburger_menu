@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1080 1080">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #1d1d1b;
+      }
+
+      .st1 {
+        fill: #d41116;
+      }
+    </style>
+  </defs>
+  <g id="BG">
+    <rect class="st0" y="0" width="1080" height="1080"/>
+  </g>
+  <g id="LOGO">
+    <path class="st1" d="M511.2,156.5c157.5,0,335.8,80.3,394.9,243.5,27.4,75.8-1.1,211.5-17.9,275-39.4,126.9-185.7,232.6-337.6,248.4h-28.1c-39.4,0-84.3-10.6-123.7-21.2-163.1-52.9-236.3-179.8-236.3-322.6s39.4-216.9,118.1-301.5c56.3-63.5,129.3-116.4,213.7-121.7h16.8Z"/>
+  </g>
+</svg>

@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "Tanker-Regular";
+    src: url("./fonts/Tanker-Regular.woff2") format("woff2"),
+      url("./fonts/Tanker-Regular.woff") format("woff"),
+      url("./fonts/Tanker-Regular.ttf") format("truetype");
+    font-weight: 200;
+    font-display: swap;
+    font-style: bold;
+}
+@font-face {
+    font-family: "Sentient-Light";
+    src: url("./fonts/Sentient-Light.woff2") format("woff2"),
+      url("./fonts/Sentient-Light.woff") format("woff"),
+      url("./fonts/Sentient-Light.ttf") format("truetype");
+    font-weight: 200;
+    font-display: swap;
+    font-style: normal;
+}
+
+body {
+    background-color: #2d2d2b;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Tanker-Regular", sans-serif;
+    font-size: 2.5rem;
+    color: #ECECEC;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    margin: 0 auto
+}
+
+h2 {
+    font-family: "Tanker-Regular", sans-serif;
+    font-size: 2rem;
+    color: #ECECEC;
+    letter-spacing: 0.2rem;
+    text-align: left;
+}
+
+header {
+    padding: 20px 30px;
+    display: flex;
+}
+
+.logo {
+    width: 80px;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    color: #ECECEC;
+    padding: 0;
+    margin-left: auto;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: "Sentient-Light", sans-serif;
+    font-size: 1rem;
+    color: #ECECEC;
+    margin: 0 20px;
+    text-align: center;
+    
+}
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    cursor: pointer;
+}
+.hamburger-menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #ECECEC;
+}
+
+nav ul.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #2d2d2b;
+    padding: 20px 0;
+}
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #2d2d2b;
+        padding: 20px 0;
+    }
+    .menu-list {
+        display: none;
+    }
+}
