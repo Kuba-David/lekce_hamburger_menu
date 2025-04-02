@@ -3,30 +3,36 @@
     src: url("./fonts/Tanker-Regular.woff2") format("woff2"),
       url("./fonts/Tanker-Regular.woff") format("woff"),
       url("./fonts/Tanker-Regular.ttf") format("truetype");
-    font-weight: 200;
+    font-weight: 600;
     font-display: swap;
-    font-style: bold;
+    font-style: normal;
 }
 @font-face {
-    font-family: "Sentient-Light";
-    src: url("./fonts/Sentient-Light.woff2") format("woff2"),
-      url("./fonts/Sentient-Light.woff") format("woff"),
-      url("./fonts/Sentient-Light.ttf") format("truetype");
+    font-family: "Sentient-Regular";
+    src: url("./fonts/Sentient-Regular.woff2") format("woff2"),
+      url("./fonts/Sentient-Regular.woff") format("woff"),
+      url("./fonts/Sentient-Regular.ttf") format("truetype");
     font-weight: 200;
     font-display: swap;
     font-style: normal;
 }
 
 body {
-    background-color: #2d2d2b;
+    background-color: #333333;
     margin: 0;
+    height: 100vh;
+}
+
+main {
+    height: calc(100vh - 90px);
+    align-content: center;
 }
 
 h1 {
-    font-family: "Tanker-Regular", sans-serif;
+    font-weight: normal;
+    font-family: "Sentient-Regular", serif;
     font-size: 2.5rem;
     color: #ECECEC;
-    letter-spacing: 0.2rem;
     text-align: center;
     margin: 0 auto
 }
@@ -42,72 +48,112 @@ h2 {
 header {
     padding: 20px 30px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d2d2b;
 }
 
 .logo {
-    width: 80px;
+    height: 50px;
+    z-index: 20;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+}
 
 nav ul {
+    margin: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     list-style: none;
     color: #ECECEC;
     padding: 0;
-    margin-left: auto;
 }
 
 nav ul li a {
     text-decoration: none;
-    font-family: "Sentient-Light", sans-serif;
-    font-size: 1rem;
+    font-weight: normal;
+    font-family: "Tanker-Regular", sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
     color: #ECECEC;
-    margin: 0 20px;
+    margin-left: 30px;
     text-align: center;
     
 }
-.hamburger-menu {
+
+nav ul li a:hover, 
+nav ul li a:focus {
+    color: #D41116;
+}
+
+.hamburger {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     height: 30px;
     cursor: pointer;
 }
-.hamburger-menu span {
+.hamburger span {
     display: block;
     width: 30px;
     height: 3px;
+    border-radius: 3px;
     background-color: #ECECEC;
+}
+
+.hamburger:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 nav ul.active {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #2d2d2b;
-    padding: 20px 0;
+    color: #ECECEC;
 }
+
 @media (max-width: 768px) {
-    .hamburger-menu {
+    .hamburger {
         display: flex;
+        z-index: 20;
     }
-    nav ul {
+
+
+    nav{
         display: none;
-        flex-direction: column;
+    }
+
+    .show {
+        display: flex;
         position: absolute;
-        top: 60px;
-        left: 0;
+        align-items: center;
         width: 100%;
-        background-color: #2d2d2b;
-        padding: 20px 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        background-color: #2d2d2bfb;
+        z-index: 10;
     }
-    .menu-list {
-        display: none;
+    
+    .show ul {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
     }
+
+    .show a {
+        font-size: 2rem;
+        margin: 0;
+        padding: 0;
+   }
 }
