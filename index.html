@@ -33,18 +33,27 @@
             <h1>řekni to <br>trikem</h1>
             <img src="./images/KOSMO_carousel.png" alt="KOSMO_carousel">
         </div>    
-        <div class="form-container">
+        <div class="form-container" id="contact">
             <form>
                 <h2>Máš hlad po triku? <br>napiš nám!</h2>
                 <label for="name">jméno máš?</label>
                     <input type="text" id="name" placeholder="sem ho naťukej..." required>
                 <label for="name">e-mail máš?</label>
-                    <input type="email" id="email" placeholder="sem ho naťukej..." pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" required>
-                <label for="message">co bys chtěl?</label>
-                    <textarea id="message" name="message" rows="5" placeholder="moc se nerozepisuj..." required></textarea>
-                <button type="submit">Odeslat</button>    
+                    <div class="form-icon">
+                        <input type="email" id="email" placeholder="poděl se o něj..." required>
+                        <svg class="icon"><use href="./icons.svg#icon-email"></use></svg>
+                    </div>
+                <label for="message">co bys od nás chtěl?</label>
+                    <textarea id="message" name="message" rows="5" placeholder="ale moc se nerozepisuj..." required></textarea>
+                <button type="submit">odeslat</button>    
             </form>
-        </div>    
+        </div>
+        <section class="youtube">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bsfBxs53vBo?si=z-yBJ0IOrJbwm5Gx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section class="gmaps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2200.5992092067345!2d-17.02862471168355!3d32.78968732016013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605baff15783db%3A0x104a0000c0faaa07!2sRef%C3%BAgio%20da%20Casinha!5e1!3m2!1scs!2scz!4v1744309699476!5m2!1scs!2scz" width="560" height="315" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
     </main>
 </body>
 </html>
