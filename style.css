@@ -21,6 +21,7 @@ body {
     background-color: #333333;
     margin: 0;
     height: 100vh;
+    
 }
 
 main {
@@ -50,7 +51,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2d2d2b;
     z-index: 10;
 }
 
@@ -152,15 +152,21 @@ nav ul li a:focus {
 }
 
 .carousel {
-    height: 100vh;
     justify-content: center;
     align-items: center;
     z-index: 5;
-    margin-bottom: 50px;
+    margin: 10px 10px 50px 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100vh;
     
 }
-.carousel h1 {
+
+.firstPIC {
     
+}
+
+.carousel h1 {
     position: absolute;
     font-size: 5rem;
     top: 40%;
@@ -171,7 +177,7 @@ nav ul li a:focus {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top left;
+    
 }
 
 .form-container {
@@ -180,9 +186,8 @@ nav ul li a:focus {
     border-radius: 20px;
     box-shadow: 0 0 7px rgba(0,0,0,0.1);
     min-width: 320px;
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto 50px auto;
+    max-width: 800px;
+    margin: 25px auto;
   }
   
   form label {
@@ -273,14 +278,85 @@ nav ul li a:focus {
     margin: 0 40px;
 }
 
-.youtube {
+.animace {
     display: flex;
     justify-content: center;
-    margin: 0 auto 50px auto;
+    align-items: center;
+    margin-bottom: 50px;
 }
-.gmaps {
+
+.box {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 20px;
+    align-content: center;
+    text-align: center;
+    background-color: #D41116;
+    font-family: "Tanker-Regular", sans-serif;
+    font-size: 2rem;
+    color: white;
+    
+    animation: slideIn 2000ms ease-out infinite;
+}
+    @keyframes slideIn {
+        from {
+        transform: translateX(-300%);
+        opacity: 0%;
+        }
+        to {
+        transform: translateX(0);
+        opacity: 100%;
+        }
+    }
+
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 0 20px;
+    align-content: center;
+    text-align: center;
+    background-color: #D41116;
+    font-family: "Tanker-Regular", sans-serif;
+    font-size: 2rem;
+    color: white;    
+}
+.box2:hover {
+    animation: pulse 0.5s ease-in-out;
+}
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ECECEC;
+  border-top: 5px solid #D41116;
+  border-radius: 50%;
+  animation: spin 1500ms linear infinite;
+}
+@keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+footer {
+    background-color: #D41116;
+    margin: 10px;
+    border-radius: 20px 20px 0 0;
+    padding: 25px;
     display: flex;
-    justify-content: center;
-    margin: 0 auto 50px auto;
+    justify-content: space-between;
+}
+
+.gmaps {
+    
     
 }
