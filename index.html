@@ -27,7 +27,7 @@
     <main>
         <div id="modal" class="modal">
             <span></span>
-            <h3>Vyskočím, aby jste se lekli a samým leknutím si koupili triko!</h3>
+            <h3>Vyskočím, aby jste se lekli <br>a samým leknutím si koupili triko!</h3>
         </div>
         <section class="carousel">
             <h1>řekni to <br>trikem</h1>
@@ -48,26 +48,32 @@
             <form>
                 <h2>Máš hlad po triku? <br>napiš nám!</h2>
                 <label for="name">jméno máš?</label>
-                    <input type="text" id="name" placeholder="sem ho naťukej..." required>
+                    <div class="form-icon">
+                        <svg class="icon"><use href="./icons.svg#user"></use></svg>
+                        <input type="text" id="name" placeholder="sem ho naťukej..." required>
+                    </div>    
                 <label for="name">e-mail máš?</label>
                     <div class="form-icon">
+                        <svg class="icon"><use href="./icons.svg#email"></use></svg>
                         <input type="email" id="email" placeholder="poděl se o něj..." required>
-                        <svg class="icon"><use href="./icons.svg#icon-email"></use></svg>
                     </div>
                 <label for="message">co bys od nás chtěl?</label>
-                    <textarea id="message" name="message" rows="5" placeholder="ale moc se nerozepisuj..." required></textarea>
+                    <div class="form-icon">
+                        <svg class="icon"><use href="./icons.svg#poll"></use></svg>
+                        <textarea id="message" name="message" rows="5" placeholder="ale moc se nerozepisuj..." required></textarea>
+                    </div>
                 <button type="submit">odeslat</button>    
             </form>
         </section>
     </main>
     <footer>
         <ul>
-            <li>jmeno</li>
+            <li>jméno</li>
             <li>telefon</li>
             <li>adresa</li>
         </ul>
-        <div class="gmaps">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2200.5992092067345!2d-17.02862471168355!3d32.78968732016013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605baff15783db%3A0x104a0000c0faaa07!2sRef%C3%BAgio%20da%20Casinha!5e1!3m2!1scs!2scz!4v1744309699476!5m2!1scs!2scz" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2200.5992092067345!2d-17.02862471168355!3d32.78968732016013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc605baff15783db%3A0x104a0000c0faaa07!2sRef%C3%BAgio%20da%20Casinha!5e1!3m2!1scs!2scz!4v1744309699476!5m2!1scs!2scz" width="350" height="250" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </footer>
 </body>

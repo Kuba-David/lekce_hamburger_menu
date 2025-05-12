@@ -1,0 +1,13 @@
+@use "variables";
+
+nav ul {
+    color: variables.$main-color;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+nav ul li {
+    margin-left: variables.$margin;
+  }

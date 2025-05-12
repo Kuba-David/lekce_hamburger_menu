@@ -1,0 +1,81 @@
+// === BREAKPOINTY ===
+$breakpoints: (
+  mobile: 480px,
+  tablet: 768px,
+  desktop: 1024px
+);
+
+@mixin respond-to($device) {
+  @media (max-width: map-get($breakpoints, $device)) {
+    @content;
+  }
+}
+
+// === FLEX CENTER ===
+@mixin centerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// === BUTTON MIXIN ===
+@mixin buttonStyle($bg-color, $text-color) {
+  padding: 0.8rem 1.5rem;
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+// === STYLY ===
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  background: #fefefe;
+  text-align: center;
+
+  @include respond-to(mobile) {
+    padding: 1rem;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+
+  @include respond-to(tablet) {
+    font-size: 2rem;
+  }
+
+  @include respond-to(mobile) {
+    font-size: 1.5rem;
+  }
+}
+
+.center-box {
+  width: 300px;
+  height: 200px;
+  background-color: #dbeafe;
+  margin: 2rem auto;
+  @include centerFlex;
+
+  @include respond-to(mobile) {
+    width: 90%;
+    height: 150px;
+  }
+}
+
+.btn-primary {
+  @include buttonStyle(#2563eb, #fff);
+}
+
+.btn-secondary {
+  @include buttonStyle(#6b7280, #fff);
+}
